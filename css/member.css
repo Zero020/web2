@@ -1,0 +1,225 @@
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css');
+
+/* 메인 컨테이너 */
+#main_content {
+    font-family: 'NanumSquareNeo';
+    position: relative;
+    align-items: center; /* 세로 중앙 정렬 */
+    width: 900px;
+    height: 500px;
+    margin: 150px auto; /* 화면 중앙에 배치 */
+    background-color: rgba(255, 255, 255, 0.97); /* 반투명 배경 */
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+/* 가입 양식 폼 */
+#join_box {
+    width: 85%;
+    margin: 0 auto;
+ 
+}
+
+#join_box h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 60px;
+    font-weight: bold;
+
+}
+
+#join_box p {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 왼쪽/오른쪽 폼 배치 */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: flex-start; /* 상단 정렬 */
+    flex-wrap: wrap; /* 화면이 좁아지면 폼이 아래로 배치 */
+}
+
+.form-left, .form-right {
+    width: 45%;
+}
+.form-left{
+    margin-top: 30px;
+}
+.form-left .form,
+.form-right .form {
+    margin-bottom: 20px;
+}
+.error-message {
+    position: absolute; /* 절대 위치 설정 */
+    top: 80%; /* 입력 필드 아래에 표시 */
+    left: 0;
+    font-size: 12px;
+    color: #b03e0e;
+    margin-top: 0;
+    white-space: nowrap; /* 줄 바꿈 방지 */
+}
+.col2{
+    margin-left: -10px;
+    margin-top: 5px;
+}
+
+/* 입력 필드 스타일 */
+.form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+}
+input::placeholder {
+    color: #b9bfc4;
+}
+
+.form label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 에러 메시지 */
+.error-message {
+    font-size: 12px;
+    color: #b03e0e;
+    margin-top: -2px;
+}
+
+/* 프로필 사진 */
+.profile-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: -9px;
+    margin-bottom: 25px;
+    top: -7px;
+}
+.profile-container h3 {
+    margin: 0; /* 기본 여백 제거 */
+    font-size: 16px; /* 글자 크기 조정 */
+}
+.profile-image-wrapper {
+    margin-left: 50px;
+    position: relative;
+    margin-top: 7px;
+    display: inline-block;
+    width: 107px;
+    height: 107px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    overflow: visible;
+    border: 2px solid #ddd;
+    z-index: 0;
+    top: 25px;
+    
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.profile-image-icon {
+    position: relative;
+    z-index: 2;
+}
+
+.profile-image-wrapper .upload-icon {
+    position: absolute;
+    z-index: 999;
+    bottom: 10px; /* 원 밖으로 걸치게 설정 */
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ffffff; /* 아이콘 배경 */
+    border-radius: 50%; /* 원형 아이콘 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.profile-image-wrapper .upload-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 시작하기 버튼 */
+.buttons {
+    position: absolute;
+    right: 90px;
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    margin-top: 10px;
+}
+.buttons .submit-btn:disabled {
+    background-color: #efefef; /* 비활성화 상태의 배경색 */
+    color: #bdb2b2; /* 비활성화 상태의 텍스트 색 */
+    cursor: default; /* 클릭 불가 커서 */
+}
+
+.buttons .submit-btn {
+    background-color: #ee6b4a;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+/* 이메일 입력 필드 */
+.email-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-container input[type="text"] {
+    flex: 1; /* 입력 필드 너비를 균등하게 */
+    padding: 10px; /* 입력 필드 내부 여백 */
+    font-size: 14px; /* 텍스트 크기 */
+    border: 1px solid #ccc; /* 테두리 스타일 */
+    box-sizing: border-box; /* 박스 크기 포함 계산 */
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+}
+
+.email-container span {
+    font-size: 14px; /* @ 기호 크기 */
+    color: #333;
+}
+
+input:focus, .email-container input[type="text"]:focus {
+    outline: none; /* 기본 outline 제거 */
+    border-bottom: 2px solid #b03e0e; /* 원하는 색상으로 변경 */
+    background-color: transparent;
+}
+footer {
+    margin-top: 150px; /* 메인 콘텐츠와 푸터 사이 간격 추가 */
+    height: 100px;
+    background-color: #e2530b;
+}
