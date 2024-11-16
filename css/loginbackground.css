@@ -1,0 +1,48 @@
+body {
+    background-size: cover; /* 화면 크기에 맞게 조절 */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh; /* 화면 전체 높이 보장 */
+    display: flex;
+    flex-direction: column; /* 콘텐츠와 푸터를 세로로 정렬 */
+}
+
+/* 하단 푸터 */
+footer {
+    margin-top: auto; /* 푸터를 화면 하단에 고정 */
+    height: 100px;
+    background-color: #b03e0e;
+}
+
+#footer_content {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    color: #dddddd;
+}
+
+#footer_logo {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    font-size: 16px;
+}
+
+#footer_logo span {
+    color: rgb(255, 255, 255);
+}
+
+#download {
+    position: absolute;
+    top: 20px;
+    left: 400px;
+}
+
+#author {
+    position: absolute;
+    top: 20px;
+    left: 700px;
+}
