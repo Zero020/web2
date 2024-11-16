@@ -6,7 +6,7 @@ const dots = document.querySelectorAll('.dot');
 let currentIndex = 0;
 
 function updateSlider() {
-    slider.style.transform = `translateX(-${currentIndex * 70}%)`;
+    slider.style.transform = `translateX(-${currentIndex * 30}%)`;
 
     items.forEach((item, index) => {
         if (index === currentIndex) {
@@ -28,17 +28,20 @@ function updateSlider() {
 prevBtn.addEventListener('click', () => {
     currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
     updateSlider();
+    console.log(`Prev button clicked. Current index: ${currentIndex}`); // 이벤트 로깅
 });
 
 nextBtn.addEventListener('click', () => {
     currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
     updateSlider();
+    console.log(`Next button clicked. Current index: ${currentIndex}`); // 이벤트 로깅
 });
 
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
         currentIndex = index;
         updateSlider();
+        console.log(`Dot ${index + 1} clicked. Current index: ${currentIndex}`); // 이벤트 로깅
     });
 });
 

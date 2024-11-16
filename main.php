@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-    <script src="js/slider.js"></script>
 </head>
 <body>
      <?php include 'header.php'; ?>
@@ -95,7 +94,7 @@
         </div>
     </div>
 </section>
-
+<script src="js/slider.js"></script>
 
 </body>
 </html>

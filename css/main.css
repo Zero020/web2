@@ -143,26 +143,29 @@ header nav ul li a:hover {
 }
 
 .popular-books .book img {
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 
 /* 카테고리 섹션 */
 .categories {
-    background: #444; /* 카테고리 배경 어둡게 */
+    background: #282828; /* 카테고리 배경 어둡게 */
     color: #fff;
     text-align: center;
-    padding: 40px 20px; /* 패딩 추가 */
+    padding: 4px 0px; /* 패딩 추가 */
+    max-height: 90vh; /* 최대 높이를 화면의 90%로 제한 */
+    
 }
 
 .categories h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .category-slider-container {
     position: relative;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -173,12 +176,13 @@ header nav ul li a:hover {
 }
 
 .slider-item {
-    flex: 0 0 60%; /* 중앙 아이템 크기 */
-    margin: 0 10px; /* 아이템 간 간격 */
+    flex: 0 0 40%; /* 중앙 아이템 크기 */
+    margin: 0 0 20px -10px; /* 아이템 간 간격 */
     text-align: center;
     opacity: 0.5; /* 양옆 아이템 흐릿하게 */
     transform: scale(0.8); /* 크기 축소 */
     transition: transform 0.5s, opacity 0.5s;
+    
 }
 
 .slider-item.active {
@@ -187,17 +191,21 @@ header nav ul li a:hover {
 }
 
 .slider-item img {
-    width: 100%;
+    height: 500px; /* 세로 고정 */
+    width: auto; /* 가로는 비율 유지 */
     border-radius: 10px;
-    object-fit: cover;
+    object-fit: cover; /* 이미지가 비율에 맞게 채워짐 */
+
 }
+
 
 .slider-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    background: rgba(43, 43, 43, 0.5);
+    border-radius: 30px;
+    color: #d6d3d3;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -209,7 +217,7 @@ header nav ul li a:hover {
 }
 
 #next {
-    right: 10px;
+    right: -10px;
 }
 
 .slider-dots {
